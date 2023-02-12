@@ -4,9 +4,9 @@
 </head>
 <body>
 <?
-	echo "Your name is $_POST[txtname]”;
-	echo "Your gender is $_POST[radsex]”;
-	echo "Your occupation is $_POST[seloccupation]”;
+	echo "Your name is $_POST[txtname]";
+	echo "Your gender is $_POST[radsex]";
+	echo "Your occupation is $_POST[seloccupation]";
 	
 ?>
 </body>
