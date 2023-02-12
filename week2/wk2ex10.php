@@ -13,6 +13,7 @@
 <tr><th>Index</th><th>Subject</th></tr>
 
 <?php
+
 for($count = 0;$count < 3; $count++)  
     {   
       $c = "year " . ($count + 1);
