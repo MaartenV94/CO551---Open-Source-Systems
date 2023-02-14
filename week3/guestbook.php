@@ -23,6 +23,7 @@
     }
 ?>
 <h2>The entries so far:</h2>
+<br/>
 
 <?php
     // Substitute your login in place of "yourLogin"
