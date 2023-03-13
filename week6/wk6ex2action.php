@@ -1,4 +1,6 @@
 <?php	
+	session_start();
+	$_SESSION =  ["id"] = $_GET = ["id"];
 
 	// Connect to server and select database
     $conn = new mysqli("localhost","root","","db1_gwalke01");
@@ -13,10 +15,10 @@
 
 <html>
 <body>
-<form action="" method="post">
+<form action="wk6ex3.php?id=<?php echo $_GET["id"]; ?>" method="post">
 
 	Name :
-	<input type=text name=txtname value="<?php echo $row["name"] ?>" readonly />
+	<input type=text name=txtname value="<?php echo $row["name"] ?>" />
 	</br>
 	Phone number :
 	<input type=text name=txttelno value="<?php echo $row["phone_number"]?>" />
@@ -26,7 +28,7 @@
 	</br>
 	
 	<input type=submit name=btnsubmit value="save"/>
-
+	
 </form>
 </body>
 
