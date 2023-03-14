@@ -6,19 +6,13 @@
 
     // Update query
     $sql = "UPDATE test SET name = '$_POST[txtname]', 
-            phone_number = '$_POST[txttelno]', 
-            email = '$_POST[txtemail]'
-            WHERE ID = '$_SESSION[id]';";
+            email = '$_POST[txtemail]',
+            phone_number = '$_POST[txttelno]'
+            WHERE ID = '$_SESSION[id]'";
 
     // Execute query
-    $result = $conn->query($sql);
-
-    //echo $sql;
-
-    if ($result) (
-        //echo "Saved Successfully!";
-    )
+    $conn->query($sql);
 
     header('Location: wk6ex2.php');
-
+    exit();
 ?>
