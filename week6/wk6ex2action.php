@@ -15,7 +15,7 @@
 
 <html>
 <body>
-<form action="wk6ex3.php" method="post">
+<form action="wk6ex4.php" method="post">
 
 	Name :
 	<input type=text name=txtname value="<?php echo $row["name"] ?>" />
