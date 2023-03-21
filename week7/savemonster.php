@@ -1,6 +1,6 @@
 <?php
     
-$db = mysqli_connect("localhost", "mysqlusername", "mysqlpassword", "mysqldatabase");
+$db = mysqli_connect("localhost","21424839","mysqluser","db5_21424839");
 
 // Obtain the file sent to the server within the response.
 $image = $_FILES['monsterimage']['tmp_name']; 
