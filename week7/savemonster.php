@@ -10,10 +10,12 @@ $audio = $_FILES['monsteraudio']['tmp_name'];
     $imagedata = addslashes(fread(fopen($image, "r"), filesize($image)));
     $audiodata = addslashes(fread(fopen($audio, "r"), filesize($audio)));
     
-    $sql = "INSERT INTO monster" (name, image, audio) VALUES ('$_POST[txtname]', '$imagedata','$audiodata');";
+    $sql = "INSERT INTO monster";
+    $sql .= "(name, image, audio) ";
+    $sql .= "VALUES ('$_POST[txtname]', '$imagedata','$audiodata');";
 
     mysqli_query($conn, $sql);
 
     header("Location: wk7ex1.html");
-    exit();
+    mysqli_close();
 ?>
