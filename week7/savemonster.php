@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("localhost","21424839","mysqluser","db5_21424839");
+$conn = mysqli_connect("localhost","21424839","mysqluser","db5_21424839");
 
 // Obtain the file sent to the server within the response.
 $image = $_FILES['monsterimage']['tmp_name']; 
@@ -10,11 +10,9 @@ $audio = $_FILES['monsteraudio']['tmp_name'];
     $imagedata = addslashes(fread(fopen($image, "r"), filesize($image)));
     $audiodata = addslashes(fread(fopen($audio, "r"), filesize($audio)));
     
-    $sql = "INSERT INTO monster";
-    $sql .= "(name, image, audio) ";
-    $sql .= "VALUES ('$_POST[txtname]', '$imagedata','$audiodata');";
+    $sql = "INSERT INTO monster" (name, image, audio) VALUES ('$_POST[txtname]', '$imagedata','$audiodata');";
 
-    mysqli_query($sql, $db);
+    mysqli_query($conn, $sql);
 
     header("Location: wk7ex1.html");
     exit();
