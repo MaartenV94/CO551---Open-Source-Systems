@@ -6,7 +6,7 @@
 
     $sql = "SELECT image FROM monster WHERE id='" . $_GET[id] ."';";
 	
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($sql, $conn);
     $row = mysqli_fetch_array($result);
     
     $jpg = $row["image"];
