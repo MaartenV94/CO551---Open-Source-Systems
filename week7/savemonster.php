@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("localhost", "21424839", "mysqluser", "db5_21424839");
+$link = mysqli_connect("localhost", "21424839", "mysqluser", "db5_21424839");
 
 // Obtain the file sent to the server within the response.
 $image = $_FILES['monsterimage']['tmp_name']; 
@@ -14,8 +14,8 @@ $audio = $_FILES['monsteraudio']['tmp_name'];
     $sql .= "(name, image, audio) ";
     $sql .= "VALUES ('$_POST[txtname]', '$imagedata','$audiodata');";
 
-    mysqli_query($sql, $db);
+    mysqli_query($link, $sql);
 
-    //header("Location: wk7ex1.html");
+    header("Location: wk7ex1.html");
     mysqli_close();
 ?>
