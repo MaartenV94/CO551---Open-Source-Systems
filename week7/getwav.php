@@ -1,6 +1,6 @@
 <?php
 
-    header("Content-type: image/jpeg");
+    header("Content-type: audio.wav");
 
     $conn = mysqli_connect("localhost","21424839","mysqluser","db5_21424839");
 
