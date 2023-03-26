@@ -4,7 +4,7 @@
 
 <?php
   
-  $conn = mysqli_connect("localhost", "21424938","mysqluser", "db5_21424839");
+  $conn = mysqli_connect("localhost", "21424839","mysqluser", "db5_21424839");
 
 $sql = "select id,name from monster;";
 
