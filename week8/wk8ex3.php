@@ -8,10 +8,7 @@
         }
         $conn = mysqli_connect("localhost","21424839","mysqluser","db5_21424839");
 
-        $sql = "insert into lotto (lottodate,number1,number2,";
-        $sql = $sql . "number3,number4,number5,number6)";
-        $sql = $sql . " values ($lottodate,$number[1],$number[2],";
-        $sql = $sql . "$number[3],$number[4],$number[5],$number[6]);";
+        $sql = "INSET INTO lotto (lottodate,number1,number2,number3,number4,number5,number6) VALUES ('$lottodate','$number[1]','$number[2]','$number[3]','$number[4]','$number[5]','$number[6]');";
 
         $result = mysqli_query($conn, $sql);
         echo "<br/>This weeks numbers have been saved";
